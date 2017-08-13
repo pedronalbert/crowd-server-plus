@@ -1,0 +1,2 @@
+class HelpUsCategorizeAnswer < ApplicationRecord
+end
