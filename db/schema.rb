@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170813221552) do
+ActiveRecord::Schema.define(version: 20170814014530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(version: 20170813221552) do
     t.string "type"
     t.string "category"
     t.string "subcategory"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ebay_answers", force: :cascade do |t|
+    t.string "title"
+    t.string "answer_button"
+    t.string "answer_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
